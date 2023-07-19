@@ -1,5 +1,5 @@
 # RemoveUnnecessaryBrackets
-Created be me, this program removes all unnecessary brackets from a calculation ?1+(2+(3*4)+5)? (Question marks intentional)
+Created be me, this program removes all unnecessary brackets from a calculation ?1+(2+(3*4)+5)? (Question marks intentional). It will solve ANY calculation as long as it doesn't use spceial math-shortforms like: (1+1)(1+1) or 3(1+1) (multiplication operator is left out)
 
 # Requirements
 JDK 14.0.2 (Not working on JDK 11, 17).

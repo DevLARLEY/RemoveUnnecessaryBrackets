@@ -20,16 +20,19 @@ public class RemoveUnnecessaryBrackets {
             if(p.eval(s).toString().equals(p.eval(f).toString())){s=f;}else{j++;}}return s;
     }
 
-    public static void main(String[] args) throws ScriptException {
+    public static void main(String[] args) throws ScriptException {  
         if(args.length>0){
-            String i=args[0];
-            long t1=System.nanoTime();
-            String o=rrb(i);
-            long t2=System.nanoTime();
-            System.out.println(i + " --[" + ((t2-t1)/1000000) + "ms]-> " + o);
-
+            if(args[0].startsWith("?")&&args[0].endsWith("?")){
+                String i=args[0].substring(1, args[0].length()-1);
+                long t1=System.nanoTime();
+                String o=rrb(i);
+                long t2=System.nanoTime();
+                System.out.println(i + " --[" + ((t2-t1)/1000000) + "ms]-> " + o);
+            }else{
+                System.out.println("The input has to be enclosed in qustion marks: ?((1+4)+3*2)?");
+            }
         }else{
-            System.out.println("No Argument! Example: ((1+4)+3*2)");
+            System.out.println("No Argument! Example: ?((1+4)+3*2)?");
         }
     }
 }

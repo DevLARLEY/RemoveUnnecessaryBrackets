@@ -11,7 +11,7 @@ public class RemoveUnnecessaryBrackets {
         Stack<Integer> st=new Stack<>();for(int i = a; i<s.length(); i++){
             if(s.charAt(i)=='('){st.push((int)s.charAt(i));}else if(s.charAt(i)==')'){st.pop();if(st.empty())return i;}}return -1;}
 
-    public static String rrb(String s)throws ScriptException{  // By github.com/DevLARLEY/RemoveUnnecessaryBrackets
+    public static String rrb(String s)throws ScriptException{  // github.com/DevLARLEY/RemoveUnnecessaryBrackets
         if(s.length()<1)return null;int j=0;String d=s;try{p.eval(s);}catch(ScriptException x){return null;}
         int r=d.length()-d.replace("(","").replace(")","").length();
         for(int b=0;b<r;b++){int o=0;int c=0;for(int a=0;a<s.length();a++){if(j>a)continue;if(s.charAt(a)=='('){o=a;c=k(s,a);break;}}

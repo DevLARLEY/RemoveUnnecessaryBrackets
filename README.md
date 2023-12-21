@@ -16,3 +16,9 @@ javac RemoveUnnecessaryBrackets.java
 ```sh
 java RemoveUnnecessaryBrackets ?[CALCULATION]?
 ```
+
+# Example Output
+
+```sh
+((3+4)+(5+6))+((7-8)*(9*(1*2))) --[43ms]-> 3+4+5+6+(7-8)*9*(1*2)
+```
